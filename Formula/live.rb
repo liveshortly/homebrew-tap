@@ -2,9 +2,9 @@ class Live < Formula
   desc "Stream any coding-agent session to LiveShortly (live claude / live anything)"
   homepage "https://liveshortly.com"
   url "git@github.com:resapce/live.git",
-      tag:   "v0.1.0",
+      tag:   "v0.1.1",
       using: :git
-  version "0.1.0"
+  version "0.1.1"
   head "git@github.com:resapce/live.git", branch: "main", using: :git
 
   depends_on "go" => :build
