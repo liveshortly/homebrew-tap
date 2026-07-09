@@ -1,16 +1,16 @@
-# LiveShortly/homebrew-tap
+# liveshortly/homebrew-tap
 
-Homebrew tap for [`live`](https://github.com/LiveShortly/live) — stream any
+Homebrew tap for [`live`](https://github.com/liveshortly/live) — stream any
 coding-agent session to LiveShortly.
 
 The formula installs a **prebuilt binary** from the public
-[`live-dist`](https://github.com/LiveShortly/live-dist) releases. It does not
+[`live-dist`](https://github.com/liveshortly/live-dist) releases. It does not
 compile from source, so you do not need Go, and you do not need access to the
 private source repo.
 
 ```bash
 # this tap repo is still private, so tap it over SSH:
-brew tap liveshortly/tap git@github.com:LiveShortly/homebrew-tap.git
+brew tap liveshortly/tap git@github.com:liveshortly/homebrew-tap.git
 brew install liveshortly/tap/live
 
 # once this repo is public:
@@ -25,10 +25,10 @@ Upgrade with `brew upgrade liveshortly/tap/live`.
 
 ## Releasing a new version
 
-The binaries are published by CI in `LiveShortly/live`; this tap only points at
+The binaries are published by CI in `liveshortly/live`; this tap only points at
 them.
 
-1. In `LiveShortly/live`: update `CHANGELOG.md`, commit, `git tag -a vX.Y.Z`, push with `--tags`.
+1. In `liveshortly/live`: update `CHANGELOG.md`, commit, `git tag -a vX.Y.Z`, push with `--tags`.
    CI builds the four platform binaries and uploads them to `live-dist`.
 2. Here: bump `version` and all four `url` + `sha256` pairs in `Formula/live.rb`.
 
@@ -39,7 +39,7 @@ interchangeable. Get the values Homebrew wants with:
 ```bash
 V=vX.Y.Z
 for p in darwin-arm64 darwin-amd64 linux-arm64 linux-amd64; do
-  curl -sL "https://github.com/LiveShortly/live-dist/releases/download/$V/live-$V-$p.gz" \
+  curl -sL "https://github.com/liveshortly/live-dist/releases/download/$V/live-$V-$p.gz" \
     | shasum -a 256 | awk -v p="$p" '{print p, $1}'
 done
 ```
