@@ -1,29 +1,29 @@
 class Live < Formula
   desc "Stream any coding-agent session to LiveShortly (live claude / live anything)"
   homepage "https://liveshortly.com"
-  version "1.1.0"
+  version "1.2.0"
 
   # Prebuilt binaries from the public live-dist repo. Building from source here
   # would fail for anyone without access to the private liveshortly/live repo.
   on_macos do
     on_arm do
-      url "https://github.com/liveshortly/live-dist/releases/download/v1.1.0/live-v1.1.0-darwin-arm64.gz"
-      sha256 "f1c98eeb1e2af02ccfb216d2f3668e42f7abe9b9a1c4ff6b0ea616ff0813e0a2"
+      url "https://github.com/liveshortly/live-dist/releases/download/v1.2.0/live-v1.2.0-darwin-arm64.gz"
+      sha256 "e1351552e5666ed210ebdd10b0786aac58d3947b4bb78d4ed34ed89e9e02bc5b"
     end
     on_intel do
-      url "https://github.com/liveshortly/live-dist/releases/download/v1.1.0/live-v1.1.0-darwin-amd64.gz"
-      sha256 "67ce86513932dedfbd4c70b963e28d1242f6849dfc23dd63e4a50ac2005e1a31"
+      url "https://github.com/liveshortly/live-dist/releases/download/v1.2.0/live-v1.2.0-darwin-amd64.gz"
+      sha256 "8bbb69c0ffe933460025dc93a84038a4e46f31792f40092a333f201399a5b78f"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/liveshortly/live-dist/releases/download/v1.1.0/live-v1.1.0-linux-arm64.gz"
-      sha256 "31779034a0755c26840b5ad63b4a93493b4e1d0a01291efa9879c83eb5d31cf2"
+      url "https://github.com/liveshortly/live-dist/releases/download/v1.2.0/live-v1.2.0-linux-arm64.gz"
+      sha256 "0e56db25e4cd6ed27819d0189cedba54180ce16b04f3c407c8b3cf9557db910f"
     end
     on_intel do
-      url "https://github.com/liveshortly/live-dist/releases/download/v1.1.0/live-v1.1.0-linux-amd64.gz"
-      sha256 "da59fea91f64ddb2c1ec21471c694acb86d4ccfd6d8375ba73aa3c2151dcf31e"
+      url "https://github.com/liveshortly/live-dist/releases/download/v1.2.0/live-v1.2.0-linux-amd64.gz"
+      sha256 "fd5bf892969b7ba401426944f8d66455ce7766616b165402c045c8789c2dae61"
     end
   end
 
