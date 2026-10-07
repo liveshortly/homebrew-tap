@@ -1,10 +1,9 @@
 class Live < Formula
   desc "Stream any coding-agent session to LiveShortly (live claude / live anything)"
-  homepage "https://liveshortly.com"
+  homepage "https://github.com/liveshortly/live"
   version "1.2.0"
 
-  # Prebuilt binaries from the public live-dist repo. Building from source here
-  # would fail for anyone without access to the private liveshortly/live repo.
+  # Prebuilt binaries from live-dist; no local Go toolchain is needed.
   on_macos do
     on_arm do
       url "https://github.com/liveshortly/live-dist/releases/download/v1.2.0/live-v1.2.0-darwin-arm64.gz"
@@ -28,7 +27,7 @@ class Live < Formula
   end
 
   head do
-    url "git@github.com:liveshortly/live.git", branch: "main", using: :git
+    url "https://github.com/liveshortly/live.git", branch: "main", using: :git
     depends_on "go" => :build
   end
 
@@ -43,9 +42,10 @@ class Live < Formula
 
   def caveats
     <<~EOS
-      Sign in before your first session:
+      Configure your self-hosted server before signing in:
+        https://github.com/liveshortly/live#choose-your-server
         live login
-      Then stream any agent:
+      Then stream an agent to that server:
         live claude
     EOS
   end
