@@ -1,28 +1,28 @@
 class Live < Formula
   desc "Stream any coding-agent session to LiveShortly (live claude / live anything)"
   homepage "https://github.com/liveshortly/live"
-  version "2.4.3"
+  version "2.4.4"
 
   # Prebuilt binaries from live-dist; no local Go toolchain is needed.
   on_macos do
     on_arm do
-      url "https://github.com/liveshortly/live-dist/releases/download/v2.4.3/live-v2.4.3-darwin-arm64.gz"
-      sha256 "09cb5da3b833c0996e3a6214a4e155ec7a42a2116e32a416d5153a0c7413e65f"
+      url "https://github.com/liveshortly/live-dist/releases/download/v2.4.4/live-v2.4.4-darwin-arm64.gz"
+      sha256 "c63c6477cc1d7fc2e63360d3ab3fc94304b614fc2f0b78edf1b8a0b16da8d408"
     end
     on_intel do
-      url "https://github.com/liveshortly/live-dist/releases/download/v2.4.3/live-v2.4.3-darwin-amd64.gz"
-      sha256 "51b1fb9f60e429702137110de62c9d1aee9953b5e10e45a1aac0c0a56521d505"
+      url "https://github.com/liveshortly/live-dist/releases/download/v2.4.4/live-v2.4.4-darwin-amd64.gz"
+      sha256 "469bbcf7de01827f405fcdf316ecf6efaec2d49c1534f792eb80c1419150c2b1"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/liveshortly/live-dist/releases/download/v2.4.3/live-v2.4.3-linux-arm64.gz"
-      sha256 "e0322254d38fdadf228ff33c162851475c5c7bc62366ba2ff310c759a533fbc8"
+      url "https://github.com/liveshortly/live-dist/releases/download/v2.4.4/live-v2.4.4-linux-arm64.gz"
+      sha256 "0fe4d678d02236dcbb668e1d1d4a0b6f8bcf7005b85e0d0eaf7a11cdc8c4bf65"
     end
     on_intel do
-      url "https://github.com/liveshortly/live-dist/releases/download/v2.4.3/live-v2.4.3-linux-amd64.gz"
-      sha256 "a356bd808498639257bd3cae1d6c1d0fcea6e616b8c9e97d60b249fb6e3f637d"
+      url "https://github.com/liveshortly/live-dist/releases/download/v2.4.4/live-v2.4.4-linux-amd64.gz"
+      sha256 "8f304fb8c8ff7fb828e2f6731e1ebda5b3f2b9bf5d4d14ccb76f633ee0783c27"
     end
   end
 
